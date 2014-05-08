@@ -1,4 +1,4 @@
-var format = require('util').format;
+var moment = require('moment');
 var backlogApi = require('backlog-api');
 
 var allActivities = {}; // key: updated_on, value: activity
@@ -10,7 +10,7 @@ setInterval(function() {
     activities.reverse().forEach(function(activity) {
       if (!allActivities[activity.updated_on]) {
         var msg = [
-          activity.updated_on,
+          moment(activity.updated_on, 'YYYYMMDDHHmmss').format(),
           activity.issue.key,
           activity.content.replace(/\n/g, '').substring(0, 20),
         ].join(' ');
