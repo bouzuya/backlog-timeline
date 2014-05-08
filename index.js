@@ -11,6 +11,7 @@ setInterval(function() {
       if (!allActivities[activity.updated_on]) {
         var msg = [
           moment(activity.updated_on, 'YYYYMMDDHHmmss').format(),
+          activity.user.name,
           activity.issue.key,
           activity.content.replace(/\n/g, '').substring(0, 20),
         ].join(' ');
