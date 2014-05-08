@@ -4,7 +4,7 @@
   "description": "backlog timeline",
   "main": "index.js",
   "bin": {
-    "bin": "./bin/backlog-timeline"
+    "backlog-timeline": "./bin/backlog-timeline"
   },
   "scripts": {
     "test": "mocha",
