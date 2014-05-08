@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "backlog timeline",
   "main": "index.js",
+  "bin": {
+    "bin": "backlog-timeline"
+  },
   "scripts": {
     "test": "mocha",
     "start": "node index"
@@ -18,6 +21,6 @@
   },
   "homepage": "https://github.com/bouzuya/backlog-timeline",
   "dependencies": {
-    "backlog-api": "^1.0.2"
+    "backlog-api": "1.0.2"
   }
 }
